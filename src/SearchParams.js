@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
+import useBreedList from "./useBreedList";
 import Pet from "./Pet";
 
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
-const breeds = ["poodle", "Goldendoodle", "Mutt"];
+// I probably need this below.  not sure why.
+//const breeds = ["poodle", "Goldendoodle", "Mutt"];
 
 const SearchParams = () => {
   //   const location = "Seattle, WA";
   const [location, setLocation] = useState("");
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
-  // const breeds = [];  // declared above.  is that ok?
+  const [breeds] = useBreedList(animal);
   const [pets, setPets] = useState([]);
 
   useEffect(() => {

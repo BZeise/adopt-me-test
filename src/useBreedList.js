@@ -8,6 +8,11 @@ export default function useBreedList(animal) {
   const [status, setStatus] = useState("unloaded");
   // returns status to user.  not going to do this the rest of the project, but it's a good idea
 
+  // this is a joke.  don't use this:
+  //   useEffect(() => {
+  //     alert(status);
+  //   }, [status]);
+
   useEffect(() => {
     if (!animal) {
       setBreedList([]);
@@ -22,7 +27,7 @@ export default function useBreedList(animal) {
       setStatus("loading");
 
       const res = await fetch(
-        `http://pets-vs.dev-apis.com/breeds?animal=${animal}`
+        `http://pets-v2.dev-apis.com/breeds?animal=${animal}`
       );
       const json = await res.json();
       localCache[animal] = json.breeds || [];
