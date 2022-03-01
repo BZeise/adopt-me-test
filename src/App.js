@@ -6,8 +6,8 @@ import Pet from "./Pet";
 // Command+/ to comment
 const App = () => {
   return (
-    <div id="my-app">
-      <h1>Adpot Mey!</h1>
+    <div>
+      <h1>Adopt Mey!</h1>
       <Pet name="Lenneh!" animal="Dog" breed="Goldendoodle" />
       <Pet name="Saorise" animal="Dog" breed="Mutt" />
       <Pet name="Bruce Wayne" animal="Cat" breed="Batman" />
