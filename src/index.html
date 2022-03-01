@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Adopt Me</title>
+</head>
+<body>
+    <div id="root">not rendered!! OH NOES</div>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <!-- does not matter what order react + react-dom get imported -->
+    <script>
+        // code goes here
+        // ohhhh yeah that's way better
+        // ohhhhh so hot
+        //  Command+/ to comment
+        const App = () => {
+            //  React wants to re-render these very frequently
+            // So, these functions have to be fast.
+            // They should be "pure", in functional programming lingo.
+            return React.createElement(
+                "div",
+                {},
+                React.createElement("h1", {}, "Adopt Me!")
+            );
+        };
+
+        // we'll call ReactDOM.render exactly once
+        // but we'll call React.createElement thousands of times
+        // heads up:  This will be renamed 'ReactDOM.createRoot' in React v18
+        ReactDOM.render(React.createElement(App), document.getElementById("root"));
+    </script>
+</body>
+</html>
