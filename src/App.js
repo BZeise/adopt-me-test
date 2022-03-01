@@ -3,9 +3,7 @@ import { render } from "react-dom";
 import Pet from "./Pet";
 
 // code goes here
-// ohhhh yeah that's way better
-// ohhhhh so hot
-//  Command+/ to comment
+// Command+/ to comment
 const App = () => {
   //  React wants to re-render these very frequently
   // So, these functions have to be fast.
