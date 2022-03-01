@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import Pet from "./Pet";
+import SearchParams from "./SearchParams";
 
 // code goes here
 // Command+/ to comment
@@ -8,9 +9,11 @@ const App = () => {
   return (
     <div>
       <h1>Adopt Mey!</h1>
-      <Pet name="Lenneh!" animal="Dog" breed="Goldendoodle" />
+      <SearchParams />
+
+      {/* <Pet name="Lenneh!" animal="Dog" breed="Goldendoodle" />
       <Pet name="Saorise" animal="Dog" breed="Mutt" />
-      <Pet name="Bruce Wayne" animal="Cat" breed="Batman" />
+      <Pet name="Bruce Wayne" animal="Cat" breed="Batman" /> */}
       {/* NOTE:  In JSX, we need the closing / at the end of the Pet tag */}
     </div>
   );
