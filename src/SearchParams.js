@@ -14,6 +14,8 @@ const SearchParams = () => {
             placeholder="Location"
             onChange={(e) => setLocation(e.target.value)}
           />
+          {/* React hooks simulate browser events.
+          They can perform the work much faster than browsers can. */}
         </label>
         <button>Submit</button>
       </form>
