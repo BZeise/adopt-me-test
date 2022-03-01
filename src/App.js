@@ -1,3 +1,6 @@
+import React from "react";
+import { render } from "react-dom";
+
 const Pet = (props) => {
   return React.createElement("div", {}, [
     React.createElement("h1", {}, props.name),
@@ -37,6 +40,7 @@ const App = () => {
 // we'll call ReactDOM.render exactly once
 // but we'll call React.createElement thousands of times
 // heads up:  This will be renamed 'ReactDOM.createRoot' in React v18
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+// ReactDOM.render(React.createElement(App), document.getElementById("root"));
+render(React.createElement(App), document.getElementById("root"));
 
 // adding comments to fire Prettier
