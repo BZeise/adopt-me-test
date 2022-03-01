@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 const localCache = {};
 // we're just using an object, but of course this should be localStorage or something similar
@@ -6,6 +6,7 @@ const localCache = {};
 export default function useBreedList(animal) {
   const [breedList, setBreedList] = useState([]);
   const [status, setStatus] = useState("unloaded");
+  // returns status to user.  not going to do this the rest of the project, but it's a good idea
 
   useEffect(() => {
     if (!animal) {
@@ -29,4 +30,6 @@ export default function useBreedList(animal) {
       setStatus("loaded");
     }
   }, [animal]);
+
+  return [breedList, status];
 }
