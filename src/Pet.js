@@ -8,6 +8,7 @@ const Pet = ({ name, animal, breed, images, location, id }) => {
 
   return (
     // <a href={`/details/${id}`} className="pet">
+    // NOTE:  ANY TIME YOU'RE USING A LINK TAG, IT MUST BE INSIDE A BROWSERROUTER
     <Link to={`/details/${id}`} className="pet">
       <div className="image-container">
         <img src={hero} alt={name} />
