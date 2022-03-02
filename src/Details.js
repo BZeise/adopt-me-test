@@ -32,7 +32,10 @@ class Details extends Component {
     const json = await res.json();
 
     // we used to call useState.  but now we just have one function, "setState"
-    this.setState(Object.assign({ loading: false }, json.pets[0]));
+    //this.setState(Object.assign({ loading: false }, json.pets[0]));
+
+    //replace Object.assign with the spread operator:
+    this.setState({ loading: false }, ...json.pets[0]);
 
     // this.setState({
     //   loading: false,
