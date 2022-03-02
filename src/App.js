@@ -1,22 +1,23 @@
 import React, { StrictMode } from "react";
 import { render } from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Pet from "./Pet"; // now obsolete, only called by Results
 import SearchParams from "./SearchParams";
+import Details from "./Details";
 
 // code goes here
 // Command+/ to comment
 const App = () => {
   return (
     <StrictMode>
-      <div>
-        <h1>Adopt Mey!</h1>
-        <SearchParams />
-
-        {/* <Pet name="Lenneh!" animal="Dog" breed="Goldendoodle" />
-        <Pet name="Saorise" animal="Dog" breed="Mutt" />
-        <Pet name="Bruce Wayne" animal="Cat" breed="Batman" /> */}
-        {/* NOTE:  In JSX, we need the closing / at the end of the Pet tag */}
-      </div>
+      <BrowserRouter>
+        <h1>Adopt Mehhhhhy!</h1>
+        <Routes>
+          <Route path="/details/:id" element={<Details />} />
+          <Route path="/" element={<SearchParams />} />
+        </Routes>
+      </BrowserRouter>
+      {/* NOTE:  In JSX, we need the closing / at the end of the Pet tag */}
     </StrictMode>
   );
 };
