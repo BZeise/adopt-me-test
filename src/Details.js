@@ -13,11 +13,15 @@ class Details extends Component {
   // you can't use hooks in class components
   // so the first thing we do is write a constructor
   // constructor takes in `props`
-  constructor(props) {
-    super(props); // SUPERPROPSSSSS
+  // constructor(props) {
+  //   super(props); // SUPERPROPSSSSS
 
-    this.state = { loading: true };
-  }
+  //   this.state = { loading: true };
+  // }
+
+  //replace above with:
+  state = { loading: true };
+  // we can do this because we've begun to use .babelrc with the class-properties transpiler
 
   async componentDidMount() {
     // after the initial Render is complete, we'll call componentDidMount
