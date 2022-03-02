@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useDebugValue } from "react";
 
 const localCache = {};
 // we're just using an object, but of course this should be localStorage or something similar
@@ -7,6 +7,8 @@ export default function useBreedList(animal) {
   const [breedList, setBreedList] = useState([]);
   const [status, setStatus] = useState("unloaded");
   // returns status to user.  not going to do this the rest of the project, but it's a good idea
+
+  useDebugValue("number of values in cache: "); // todo:  forgot to see the bit where he called the cached count.
 
   // this is a joke.  don't use this:
   //   useEffect(() => {
