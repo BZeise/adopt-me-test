@@ -25,7 +25,7 @@ class Details extends Component {
     // fetch is a function built-in to browsers
     // more than powerful enough for simple GETs
     // it's a little funny to call `await` twice, but we get used to it
-    const res = await fetch()(
+    const res = await fetch(
       `http://pets-v2.dev-apis.com/pets?id=${this.props.params.id}`
     );
 
