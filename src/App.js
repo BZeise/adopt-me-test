@@ -1,21 +1,23 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import { render } from "react-dom";
-import Pet from "./Pet";
+// import Pet from "./Pet"; // now obsolete, only called by Results
 import SearchParams from "./SearchParams";
 
 // code goes here
 // Command+/ to comment
 const App = () => {
   return (
-    <div>
-      <h1>Adopt Mey!</h1>
-      <SearchParams />
+    <StrictMode>
+      <div>
+        <h1>Adopt Mey!</h1>
+        <SearchParams />
 
-      {/* <Pet name="Lenneh!" animal="Dog" breed="Goldendoodle" />
-      <Pet name="Saorise" animal="Dog" breed="Mutt" />
-      <Pet name="Bruce Wayne" animal="Cat" breed="Batman" /> */}
-      {/* NOTE:  In JSX, we need the closing / at the end of the Pet tag */}
-    </div>
+        {/* <Pet name="Lenneh!" animal="Dog" breed="Goldendoodle" />
+        <Pet name="Saorise" animal="Dog" breed="Mutt" />
+        <Pet name="Bruce Wayne" animal="Cat" breed="Batman" /> */}
+        {/* NOTE:  In JSX, we need the closing / at the end of the Pet tag */}
+      </div>
+    </StrictMode>
   );
 };
 
