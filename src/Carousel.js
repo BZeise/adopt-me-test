@@ -62,7 +62,7 @@ class Carousel extends Component {
 }
 
 // for example --
-console.log(Carousel.defaultProps);
+console.log("Carousel.defaultProps is: ", Carousel.defaultProps);
 // this will always be the same
 // notice that the property is of the class Carousel, not referring to a specific instance of that class
 
