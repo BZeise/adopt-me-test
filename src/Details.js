@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { useParams } from "react-router-dom";
+import Carousel from "./Carousel";
 
 // const Details = () => {
 //   const { id } = useParams();
@@ -55,10 +56,12 @@ class Details extends Component {
     }
 
     // desconstruct here
-    const { animal, breed, city, state, description, name } = this.state;
+    const { animal, breed, city, state, description, name, images } =
+      this.state;
 
     return (
       <div className="details">
+        <Carousel images={images} />
         <div>
           <h1>{name}</h1>
           <h2>
