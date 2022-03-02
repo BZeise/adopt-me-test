@@ -35,7 +35,7 @@ class Details extends Component {
     //this.setState(Object.assign({ loading: false }, json.pets[0]));
 
     //replace Object.assign with the spread operator:
-    this.setState({ loading: false }, ...json.pets[0]);
+    this.setState({ loading: false, ...json.pets[0] });
 
     // this.setState({
     //   loading: false,
