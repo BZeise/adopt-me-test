@@ -15,7 +15,7 @@ const SearchParams = () => {
   const [breed, setBreed] = useState("");
   const [breeds] = useBreedList(animal);
   const [pets, setPets] = useState([]);
-  const [theme] = useContext(ThemeContext);
+  const [theme, setTheme] = useContext(ThemeContext);
 
   useEffect(() => {
     requestPets();
@@ -100,6 +100,21 @@ const SearchParams = () => {
             })}
 
             {/* NOTE:  Any time you have a list of data that you're turning into a list of components, use .map(). */}
+          </select>
+        </label>
+
+        <label htmlFor="theme">
+          ThemeContext
+          <select
+            value={theme}
+            onChange={(e) => setTheme(e.target.value)}
+            onBlur={(e) => setTheme(e.target.value)}
+          >
+            <option value="peru">Peru</option>
+            <option value="darkblue">Dark Blue</option>
+            <option value="mediumorchid">Medium Orchid</option>
+            <option value="peru">Peru</option>
+            <option value="#f06d06">Fog Dog</option>
           </select>
         </label>
 
