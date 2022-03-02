@@ -9,7 +9,7 @@ import Details from "./Details";
 // code goes here
 // Command+/ to comment
 const App = () => {
-  const theme = useState("#f06d06");
+  const theme = useState("green");
   return (
     <StrictMode>
       <ThemeContext.Provider value={theme}>

@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 // hooks look like:
 // const [theme, setTheme] = useState('darkblue');
-const ThemeContext = createContext(["#f06d06", () => {}]);
+const ThemeContext = createContext(["#green", () => {}]);
 // we give it an empty function that does nothing
 // because if someone calls it, we want it to look like a hook
 
