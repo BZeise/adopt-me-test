@@ -65,4 +65,13 @@ class Details extends Component {
   }
 }
 
-export default Details;
+const WrappedDetails = () => {
+  const params = useParams();
+  return <Details params={params} />;
+};
+
+//export default Details;
+export default WrappedDetails;
+
+// this is a lot more direct than higher-order components
+// just using a hook and passing the params through there
