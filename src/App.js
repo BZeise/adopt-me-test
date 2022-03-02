@@ -1,24 +1,28 @@
-import React, { StrictMode } from "react";
+import React, { StrictMode, useState } from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 // import Pet from "./Pet"; // now obsolete, only called by Results
+import ThemeContext from "./ThemeContext";
 import SearchParams from "./SearchParams";
 import Details from "./Details";
 
 // code goes here
 // Command+/ to comment
 const App = () => {
+  const theme = useState("#f06d06");
   return (
     <StrictMode>
-      <BrowserRouter>
-        <header>
-          <Link to="/">Adopt Mehhhhhy!</Link>
-        </header>
-        <Routes>
-          <Route path="/details/:id" element={<Details />} />
-          <Route path="/" element={<SearchParams />} />
-        </Routes>
-      </BrowserRouter>
+      <ThemeContext.Provider value={theme}>
+        <BrowserRouter>
+          <header>
+            <Link to="/">Adopt Mehhhhhy!</Link>
+          </header>
+          <Routes>
+            <Route path="/details/:id" element={<Details />} />
+            <Route path="/" element={<SearchParams />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeContext.Provider>
       {/* NOTE:  In JSX, we need the closing / at the end of the Pet tag */}
     </StrictMode>
   );
